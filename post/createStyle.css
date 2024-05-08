@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2k6PZrkZTItUTZY44j4JvH290LdWxKsWwhJBLH7sFuw&s");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.home {
+  margin: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.homeLink {
+  text-decoration: none;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 95%;
+  padding: 5px;
+}
+
+.background h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+input {
+  padding: 15px 10px;
+  margin: 15px 0;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  padding: 15px 10px;
+  margin: 15px 0;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background: blue;
+  transform: scale(1.1);
+}

@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.post h3 {
+  text-align: left;
+}
+
+.post img {
+  width: 300px;
+  height: 150px;
+}
+
+.updates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editBtn {
+  margin: 0 10px;
+  padding: 10px;
+  background: blue;
+  border: none;
+  border-radius: 5px;
+}
+.editBtn a {
+  text-decoration: none;
+  color: white;
+}
+.deleteBtn {
+  margin: 0 10px;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

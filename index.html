@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3d70b51120.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./indexStyle.css" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <nav class="navBar">
+      <div class="blogLogo">
+        <h1 class="logoText">Blog</h1>
+        <div><i class="fa-solid fa-bars hamburger" id="hamburger"></i></div>
+      </div>
+
+      <div>
+        <ul class="navLinks" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li id="nav-signup">
+            <a href="./account/register.html">Register</a>
+          </li>
+          <li id="nav-create">
+            <a href="./post/create.html">Create Post</a>
+          </li>
+
+          <!-- Will be hidden if logged in -->
+          <li id="nav-login"><a href="./account/login.html">Login</a></li>
+
+          <!-- Will be hidden if logged in -->
+          <li id="nav-user" style="display: none">
+            <!-- Default is hidden -->
+            <a href="#">
+              <i class="fa-solid fa-user"></i>
+              <span id="nav-username">User</span>
+              <!-- Will be updated with username -->
+              <i class="fa-solid fa-chevron-down downIcon"></i>
+            </a>
+            <ul class="dropdown" id="user-dropdown">
+              <!-- Will show only if logged in -->
+              <li><a href="#" class="logout">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+      <h1 class="carouselText">Trending Posts</h1>
+      <div class="carousel">
+        <button id="prevButton">&lt;</button>
+        <!-- Left Arrow -->
+        <div class="carousel-track-container">
+          <ul class="carousel-track" id="blogCarousel"></ul>
+        </div>
+        <button id="nextButton">&gt;</button>
+        <!-- Right Arrow -->
+      </div>
+    </section>
+
+    <!-- grid blogs -->
+    <div class="container">
+      <h1 class="gridText">Recents Posts</h1>
+      <div class="gridContainer" id="gridContainer">
+  
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
