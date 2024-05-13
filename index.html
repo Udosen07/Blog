@@ -7,6 +7,12 @@
       src="https://kit.fontawesome.com/3d70b51120.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="./indexStyle.css" />
     <title>Blog</title>
   </head>
@@ -49,6 +55,15 @@
     </nav>
 
     <!-- Hero Section -->
+    <div class="blogIntro">
+      <h2 class="blogIntroText">My Blog</h2>
+      <p>
+        The New and Futuristic way of seeing life from any point of view,
+        Register and enjoy the light of the human experience followed by the
+        exciting revelation
+      </p>
+    </div>
+
     <section>
       <h1 class="carouselText">Trending Posts</h1>
       <div class="carousel">
@@ -63,12 +78,16 @@
     </section>
 
     <!-- grid blogs -->
+
+    <h1 class="gridText">Recents Posts</h1>
     <div class="container">
-      <h1 class="gridText">Recents Posts</h1>
-      <div class="gridContainer" id="gridContainer">
-  
-      </div>
+      <div class="gridContainer" id="gridContainer"></div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Copyright &copy; Blog 2024</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>

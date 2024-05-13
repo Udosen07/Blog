@@ -69,20 +69,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create the inner content for the list item
         li.innerHTML = `
-                <img src="${item.media.url}" alt="${
-          item.media.alt || "blog jpeg"
-        }" />
-                <h3>${item.title}</h3>
+                
+        <div class="cardImg" style="background-image: url('${item.media.url}');">
+        <button class="blogBtn">
+        <a href="./post/index.html?id=${item.id}">Read More</a> 
+        <!-- Pass the ID as a URL parameter -->
+    </button>
+                
                 <div class="blogDescription">
                     <p><i class="fa-solid fa-user"></i> ${item.author.name}</p>
-                    <p><i class="fa-regular fa-calendar-days"></i> ${
-                      item.created
-                    }</p>
+                    <p><i class="fa-regular fa-calendar-days"></i> ${item.created}</p>
                 </div>
-                <button class="blogBtn">
-                <a href="./post/index.html?id=${item.id}">Read More</a> 
-                <!-- Pass the ID as a URL parameter -->
-            </button>
+            </div>
+            <h2 class="blogTitle">${item.title}</h2>
             `;
 
         return li; // Return the list item element
@@ -215,24 +214,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create the inner content for the list item
         div.innerHTML = `
-        <div class="gridImg">
-        <a href="./post/index.html?id=${item.id}"> <img
-          src="${item.media.url}"
-          alt="${item.media.alt || "blog jpeg"}"
-
-        />
+        <a href="./post/index.html?id=${item.id}"><div class="gridImg" style="background-image:url('${item.media.url}');">
+        <div class="gridDescription">
+        <h3>${item.title}</h3>
+          <p><i class="fa-regular fa-calendar-days"></i> ${item.created}</p>
+      </div>
       </div></a>
 
-      <div class="gridDescription">
-        <h3>${item.title}</h3>
-        <p>
-          ${item.body}
-        </p>
-        <div class="gridFooter">
-          <p><i class="fa-solid fa-user"></i>${item.author.name}</p>
-          <p><i class="fa-regular fa-calendar-days"></i>${item.created}</p>
-        </div>
-      </div>
+      
           `;
         return div; // Return the list item element
       });

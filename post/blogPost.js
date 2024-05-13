@@ -28,18 +28,21 @@ function fetchBlogPost(postId, username) {
       // Displaying post details
       const postDetail = document.getElementById("post-detail");
       postDetail.innerHTML = `
+      
+      <div class="backgroundImg" style="background-image: url('${imageUrl}');">
+              <div class="blogHead">
               <h1>${title}</h1>
-              <img src="${imageUrl}" alt="">
-              <div class="updates">
-              <h3>Author: ${authorName}</h3>
-              <div><!-- Link to the edit page with the current post's ID -->
+              <div class="blogDes">
+              <h3>Author: ${authorName}</h3>              
+              <h3>Date: ${date}</h3>
+              </div>
+              </div>
+              </div>
+              <div class="updates"><!-- Link to the edit page with the current post's ID -->
               <button class="editBtn"><a href="./edit.html?id=${postId}">Edit</a></button>
               <!-- Button to delete the post -->
               <button id="delete-post" class="deleteBtn">Delete</button></div>
-              </div>
-              
-              <h3>Date: ${date}</h3>
-              <p>${body}</p>
+              <p class="blogBody">${body}</p>
               
               
           `;
