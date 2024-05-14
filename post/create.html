@@ -11,28 +11,30 @@
     ></script>
   </head>
   <body>
-    <a href="../index.html" class="homeLink"><div class="home">
-      <i class="fa-solid fa-chevron-left"></i> Home
-    </div></a>
-    <div class="background">
-        <h1>Create Post</h1>
+    <div class="reg">
+      <p class="regText"><a href="../index.html"><i class="fa-solid fa-chevron-left"></i> Home
+</a></p>
+      <hr />
+      <div class="regForm">
+        <h2>Create Post</h2>
         <form method="post" id="createPost">
-          <label for="title">Title</label>
-          <input type="text" id="title" name="title" required /><br />
-        <label for="image">Image URL:</label>
-        <input type="text" id="image" name="image"><br>
-        <label for="content">Content:</label>
-        <textarea id="content" name="content" required></textarea><br>
-  
+          <div class="input-container">
+            <input type="text" placeholder="Title" id="title" required />
+          </div>
+          <div class="input-container">
+            <input type="text" placeholder="Image URL" id="image" required />
+          </div>
+          <div class="input-container">
+            <textarea id="content"  placeholder="Add blog content" required></textarea>
+          </div>
           <div id="loadingSpinner" style="display: none">
             <i class="fas fa-spinner fa-spin"></i> creating...
           </div>
-  
-          <!-- Error message display -->
           <div id="errorMessage" style="display: none; color: red"></div>
-          <button type="submit">create</button>
+          <button type="submit">Create</button>
         </form>
       </div>
+    </div>
   
       <script src="./createScript.js"></script>
     </body>

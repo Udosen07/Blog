@@ -17,32 +17,37 @@
     ></script>
   </head>
   <body>
-    <div class="background">
-      <h1>Login</h1>
-      <form method="post" id="loginForm">
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br />
-        <label for="password">Password:</label><br />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          class="passwordInput"
-          minlength="8"
-          required
-        />
-        <span type="button" id="toggle-password" class="toggleBtn">
-          <i class="fas fa-eye-slash"></i>
-          <!-- Start with the "eye" icon --> </span
-        ><br />
-        <div id="loadingSpinner" style="display: none">
-          <i class="fas fa-spinner fa-spin"></i> Logining...
-        </div>
-
-        <!-- Error message display -->
-        <div id="errorMessage" style="display: none; color: red"></div>
-        <button type="submit">Login</button>
-      </form>
+    <div class="reg">
+      <p class="regText">I prefer to <a href="./register.html">Register</a></p>
+      <hr />
+      <div class="regForm">
+        <h2>Welcome back once again</h2>
+        <p>Always a pleasure to have you</p>
+        <form method="post" id="loginForm">
+          <div class="input-container">
+            <i class="icon fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Email" id="email" required />
+          </div>
+          <div class="input-container">
+            <i class="icon fas fa-lock"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              minlength="8"
+              id="password"
+            />
+            <span type="button" id="toggle-password" class="toggleBtn">
+              <i class="toggle-password fas fa-eye-slash"></i
+            ></span>
+          </div>
+          <div id="loadingSpinner" style="display: none">
+            <i class="fas fa-spinner fa-spin"></i> Logining...
+          </div>
+          <div id="errorMessage" style="display: none; color: red"></div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
 
     <script src="./loginAuth.js"></script>

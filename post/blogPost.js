@@ -30,18 +30,23 @@ function fetchBlogPost(postId, username) {
       postDetail.innerHTML = `
       
       <div class="backgroundImg" style="background-image: url('${imageUrl}');">
+      <div class="updates"><!-- Link to the edit page with the current post's ID -->
+      
+              <button class="editBtn"><a href="./edit.html?id=${postId}"><i class="fa-solid fa-pen"></i></a></button>
+              <!-- Button to delete the post -->
+              <button id="delete-post" class="deleteBtn"><i class="fa-solid fa-trash-can"></i></button></div>
               <div class="blogHead">
               <h1>${title}</h1>
               <div class="blogDes">
-              <h3>Author: ${authorName}</h3>              
-              <h3>Date: ${date}</h3>
+              
+              <h3>${date}</h3>
+              <h3>by: ${authorName}</h3>              
+              
+              
               </div>
               </div>
               </div>
-              <div class="updates"><!-- Link to the edit page with the current post's ID -->
-              <button class="editBtn"><a href="./edit.html?id=${postId}">Edit</a></button>
-              <!-- Button to delete the post -->
-              <button id="delete-post" class="deleteBtn">Delete</button></div>
+              
               <p class="blogBody">${body}</p>
               
               

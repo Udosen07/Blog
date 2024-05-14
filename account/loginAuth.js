@@ -1,7 +1,7 @@
 // Password Toggler
 const passwordInput = document.getElementById("password");
 const togglePasswordButton = document.getElementById("toggle-password");
-const toggleIcon = togglePasswordButton.querySelector("i");
+const toggleIcon = togglePasswordButton.getElementsByClassName("toggle-password");
 
 // Keep track of whether the password is currently visible or hidden
 let isPasswordVisible = false;

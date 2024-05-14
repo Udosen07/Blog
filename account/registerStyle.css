@@ -1,48 +1,36 @@
-* {
+body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2k6PZrkZTItUTZY44j4JvH290LdWxKsWwhJBLH7sFuw&s");
-  background-size: cover;
-  background-repeat: no-repeat;
+.reg {
+  margin: 20px;
   height: 100vh;
 }
 
-.background {
-  color: #fff;
-  margin: 50% 0;
-  width: 500px;
-  padding: 20px;
-  box-sizing: border-box;
+.regText {
+  text-align: right;
+  padding-right: 40px;
 }
 
-.background h1 {
+.regText a {
+  text-decoration: none;
+  color: rgb(84, 84, 230);
+}
+
+.regForm {
+  margin: 100px auto;
+  width: 40%;
   text-align: center;
-  font-size: 40px;
-  margin: 20px 0;
 }
 
-label {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0;
+.regForm h2 {
+  margin: 5px 0;
 }
 
-input {
-  padding: 15px 10px;
-  margin: 15px 0;
-  border: 0;
-  border-radius: 5px;
-  outline: none;
-  width: 100%;
-  box-sizing: border-box;
+.regForm form {
+  margin: 40px 0;
 }
 
 button {
@@ -58,33 +46,45 @@ button {
   margin: 15px 0;
 }
 
-button:hover {
-  cursor: pointer;
-  color: white;
-  background: blue;
-  transform: scale(1.1);
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.passwordInput {
-  width: 85%;
-  margin-bottom: 5px;
-}
-
-.toggleBtn {
-  background: #3f5ec4;
-  color: white;
+.input-container input {
+  width: 100%;
   padding: 10px;
-  margin: 0 5px;
+  padding-left: 40px;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-container .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.input-container .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 750px) {
-  .background {
-    padding: 10px;
+  .regForm {
+    width: 60%;
   }
+}
 
-  .toggleBtn {
-    padding: 5px;
-    margin: 0 5px;
+@media screen and (max-width: 480px) {
+  .regForm {
+    width: 90%;
   }
 }
