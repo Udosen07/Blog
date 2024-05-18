@@ -6,7 +6,9 @@ function getQueryParameter(name) {
 
 // Get the post ID from the query parameters
 const postId = getQueryParameter("id");
-const username = localStorage.getItem("username");
+const savedUsername = localStorage.getItem("username");
+const defaultUsername = "Queen";
+let username = savedUsername === null ? defaultUsername : savedUsername;
 
 // Function to fetch the blog post details
 function fetchBlogPost(postId, username) {
@@ -80,7 +82,14 @@ function fetchBlogPost(postId, username) {
             });
         }
       });
+      const updatesElement = document.querySelector(".updates");
+      if (username === savedUsername) {
+        updatesElement.style.display = "flex";
+      } else {
+        updatesElement.style.display = "none";
+      }
     })
+
     .catch((error) => {
       console.error("Error fetching blog post:", error);
       document.getElementById("post-detail").innerText = "Failed to load post.";

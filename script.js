@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // carousel api integration
   const dataList = document.getElementById("blogCarousel");
-  const name = localStorage.getItem("username");
+  const name = localStorage.getItem("username") || "Queen";
 
   // Async function to fetch data from an API
   async function fetchData() {
